@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginTop="24dp"
+        android:text="Escolha um Joken"
+        android:textColor="#111111"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPapel"
+        android:layout_width="122dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/papel"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPedra"
+        app:layout_constraintEnd_toStartOf="@+id/btnPedra"
+        app:layout_constraintTop_toTopOf="@+id/btnPedra"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnPedra"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/pedra"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnTesou"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:background="@drawable/tesoura"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPedra"
+        app:layout_constraintStart_toEndOf="@+id/btnPedra"
+        app:layout_constraintTop_toTopOf="@+id/btnPedra" />
+
+    <Button
+        android:id="@+id/btnJogar"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="28dp"
+        android:enabled="false"
+        android:shadowRadius="5"
+        android:text="Jogar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imgCpu"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="@+id/imgCpu"
+        app:layout_constraintTop_toBottomOf="@+id/imgCpu"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <ImageView
+        android:id="@+id/imgVc"
+        android:layout_width="166dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCpu"
+        app:layout_constraintEnd_toStartOf="@+id/btnPedra"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnPapel"
+        app:layout_constraintTop_toBottomOf="@+id/lblSeu"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/vc" />
+
+    <TextView
+        android:id="@+id/vitoriasCpu"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginTop="8dp"
+        android:text=":Vitórias"
+        android:textColor="#070707"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnTesou"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="@+id/btnTesou"
+        app:layout_constraintTop_toBottomOf="@+id/btnTesou" />
+
+    <ImageView
+        android:id="@+id/imgCpu"
+        android:layout_width="167dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/btnTesou"
+        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintStart_toEndOf="@+id/btnPedra"
+        app:layout_constraintTop_toBottomOf="@+id/lblCpu"
+        app:srcCompat="@drawable/cpu" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginTop="12dp"
+        android:text="Resultado"
+        android:textColor="#111111"
+        android:textSize="20sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/btnPedra"
+        app:layout_constraintStart_toStartOf="@+id/btnPedra"
+        app:layout_constraintTop_toBottomOf="@+id/btnPedra" />
+
+    <TextView
+        android:id="@+id/lblSeu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:text="Seu Joken"
+        android:textColor="#070707"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/resultado"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnPapel"
+        app:layout_constraintTop_toBottomOf="@+id/btnPapel" />
+
+    <TextView
+        android:id="@+id/vitoriasVc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Vitórias:"
+        android:textColor="#070707"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnPapel"
+        app:layout_constraintHorizontal_bias="0.29"
+        app:layout_constraintStart_toStartOf="@+id/btnPapel"
+        app:layout_constraintTop_toBottomOf="@+id/btnPapel" />
+
+    <TextView
+        android:id="@+id/lblCpu"
+        android:layout_width="124dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:text="Cpu Joken"
+        android:textColor="#070707"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnTesou"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toEndOf="@+id/resultado"
+        app:layout_constraintTop_toBottomOf="@+id/btnTesou" />
+
+    <Button
+        android:id="@+id/close"
+        android:layout_width="140dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="28dp"
+        android:shadowRadius="50"
+        android:text="Fechar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imgVc"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="@+id/imgVc"
+        app:layout_constraintTop_toBottomOf="@+id/imgVc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
